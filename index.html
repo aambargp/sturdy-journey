@@ -1528,7 +1528,6 @@ Dolores acompaña a sus amigas a consultar a una prestigiosa carcolera local, pe
 
 <style>
 
-
 .project-header{
 display:flex;
 flex-direction:column;
@@ -1556,12 +1555,6 @@ text-align:center;
 
 .hidden{
 text-align:center;
-}
-
-.hidden p{
-max-width:90%;
-margin:0 auto;
-line-height:1.8;
 }
 
 .badge{
@@ -1631,6 +1624,77 @@ text-decoration:none;
 background:#000;
 transform:translateY(-2px);
 }
+/* =========================================
+   SINOPSIS DE LOS GUIONES
+========================================= */
+
+#scripts .hidden p{
+    position:relative;
+
+    max-width:90%;
+    margin:28px auto 12px;
+    padding:24px 28px;
+    border-left:3px solid #9a7054;
+    border-radius:0 12px 12px 0;
+
+    font-family:"Cormorant Garamond", serif;
+    font-size:1.15rem;
+    line-height:1.6;
+        text-align:left;
+}
+
+/* Etiqueta SINOPSIS */
+
+#scripts .hidden p::before{
+    content:"SINOPSIS";
+
+    display:block;
+    margin-bottom:10px;
+
+    font-family:Arial, sans-serif;
+    font-size:.62rem;
+    font-weight:600;
+    letter-spacing:2px;
+
+    color:#9a7054;
+}
+
+/* Detalle en la línea lateral */
+
+#scripts .hidden p::after{
+    content:"";
+    position:absolute;
+
+    left:-3px;
+    top:0;
+
+    width:3px;
+    height:30px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+
+    #scripts .hidden p{
+        max-width:100%;
+        margin:24px auto 10px;
+
+        padding:20px 20px 20px 23px;
+
+        font-size:1.05rem;
+        line-height:1.55;
+    }
+
+    #scripts .hidden p::before{
+        font-size:.58rem;
+        letter-spacing:1.7px;
+    }
+
+}
 </style>
 
 <section id="stories" class="fade">
@@ -1671,6 +1735,8 @@ Narrativa breve
 
 Un niño recorre el atípico y frío verano porteño de 1964 en busca de changas para poder alimentar a su madre.
 
+
+
 </p>
 
 <button class="expand-btn">
@@ -1688,6 +1754,30 @@ Leer más
 Vicente es un niño de escasos recursos que intenta juntar centavo a centavo para subsistir. Tras juntar sus miedos y monedas, visita temprano una panadería para comprarle un vigilante (factura) de crema pastelera a su madre, quien permanece postrada y en absoluto silencio en la penumbra de su habitación. A lo largo del día vaga por la ciudad trabajando de manera precaria, con el único consuelo de que en pocos días podrá comprar otro dulce.
 
 </p>
+
+<h4>Fragmentos destacados</h4>
+
+<div class="quote-card">
+
+«Ningún verano fue tan frío como aquel del 64.»
+
+</div>
+
+<div class="quote-card">
+
+«Vicente comió voraz bajo la mirada atenta de la mujer. No preguntó el por qué no estaba en la escuela; no hacía falta. Comprendió con aquella lucidez que concede solo la desgracia que la necesidad no da para elegir.»
+
+</div>
+<div class="quote-card">
+
+«Buenos Aires, vasta y agotada, lo recibió con un olor a pan recién horneado que lo guió a la panadería de la esquina. [...] Siguió así su día deambulando por la ciudad, perdiéndose a propósito en la ciudad que se prestaba para ello. »
+
+</div>
+<div class="quote-card">
+
+«Entonces cayó hacia un lado con un ruido seco. Él no gritó. Algo oscuro empezó a extenderse en el suelo y alcanzó su zapato. Flexionó sus rodillas, pero no se atrevió a tocar el piso. Solo podía ver el cuerpo raquítico de su madre, los ojos abiertos. Habría querido abrazar sus costillas, mas parecían tan frágiles. A la mañana siguiente Buenos Aires siguió su curso indiferente. El niño siguió con ella.»
+
+</div>
 
 </div>
 
@@ -1848,6 +1938,28 @@ Leer más
 <p>
 Ornella evade la opresión escolar y familiar refugiándose en las lecturas en la plaza y en las misas locales. Su hermano (y futuro prometido por imposición familiar) Damián la asedia románticamente, pero es el encuentro casual con el Padre en el confesionario y durante las liturgias lo que desencadena una mutua y prohibida fascinación.
 </p>
+
+<h4>Fragmentos destacados</h4>
+
+<div class="quote-card">
+«El agua de la fuente se enturbiaba ligeramente, distorsionando el reflejo de la dulce Ornella que contemplaba los nuevos lunares con los que Hebe había decorado su pálido rostro.»</div>
+
+<div class="quote-card">
+«¿Quién podría culparlo teniendo en cuenta lo mucho que la joven resplandecía, viendo como su cuerpo encarnaba una melancolía barroca? ¿De qué servía contener sus tentaciones en un mundo ya herido? ¿Qué daño podía causar un solo desliz, cuando el juicio parecía haber abandonado la tierra?»
+</div>
+
+<div class="quote-card">
+«Agosto mutó a noviembre, el invierno a primavera, pero la fertilidad seguía secuestrada por la avaricia de la muerte. Ese día nublado, apenas bendecido por una resolana, la lluvia de arroz inundó a Ornella, que solo se mantenía de pie por la firme presión de la mano de su hermano —ahora esposo— en su espalda baja.»
+</div>
+
+<div class="quote-card">
+«Pues Oriana podría envolverse incluso en la piel de su verdadera amada, pero jamás lograría imitar su expresión, ni su voz de las frágiles olas que chocan sobre la orilla, ni el candor que gratamente ella le había ofrecido, y que grotescamente él había profanado.»
+</div>
+
+
+<div class="quote-card">
+«Bendita sea esta hija de Caín que nunca será canonizada; que sueña demasiado mas duerme muy poco y que busca a Dios en todas partes, sin obtener jamás una respuesta del otro lado.»
+</div>
 
 </div>
 
@@ -2159,6 +2271,79 @@ font-size:1rem;
 
 opacity:.82;
 
+}
+
+.card-content h4{
+    font-family:"Cormorant Garamond", serif;
+    font-size:1.15rem;
+    letter-spacing:1px;
+}
+
+.card-content h4:not(:first-child){
+    margin-top:38px;
+    padding-bottom:8px;
+    border-bottom:1px solid rgba(80,60,45,.18);
+    color:#8b654c;
+}
+
+/* =========================================
+   CITAS / FRAGMENTOS DESTACADOS
+========================================= */
+
+.quote-card{
+    position:relative;
+    margin:28px 0;
+    padding:28px 32px 28px 48px;
+
+    background:#eee7dc;
+    border-left:3px solid #9a7054;
+    
+    font-family:"Cormorant Garamond", serif;
+    font-size:1.18rem;
+    line-height:1.55;
+    font-style:italic;
+    color:#4f3d30;
+
+    overflow:visible;
+    transition:.3s;
+}
+
+/* Comilla decorativa grande */
+
+.quote-card::before{
+    content:"“";
+    position:absolute;
+    left:10px;
+    top:-18px;
+
+    font-family:Georgia, serif;
+    font-size:6rem;
+    line-height:1;
+
+    color:#9a7054;
+    opacity:.28;
+}
+
+/* Pequeño detalle inferior */
+
+.quote-card::after{
+    content:"”";
+    position:absolute;
+    right:18px;
+    bottom:-30px;
+
+    font-family:Georgia, serif;
+    font-size:5rem;
+    line-height:1;
+
+    color:#9a7054;
+    opacity:.18;
+}
+
+.quote-card:hover{
+    transform:translateX(4px);
+    border-left-width:5px;
+    background:#e9dfd1;
 }
 
 /* ==========================================
@@ -2716,8 +2901,6 @@ display:none;
     }
 
 
-    /* ---------- NAV ---------- */
-
     nav{
         padding:18px 20px;
         flex-direction:column;
@@ -2742,8 +2925,6 @@ display:none;
         font-size:.78rem;
     }
 
-
-    /* ---------- HERO ---------- */
 
     .hero{
         min-height:90vh;
@@ -2770,16 +2951,12 @@ display:none;
     }
 
 
-    /* ---------- TÍTULOS ---------- */
-
     .section-title{
         font-size:2.6rem;
         line-height:1;
         margin-bottom:35px;
     }
 
-
-    /* ---------- ABOUT ---------- */
 
     .about{
         grid-template-columns:1fr;
@@ -2791,8 +2968,6 @@ display:none;
         line-height:1.75;
     }
 
-
-    /* ---------- GUIONES / CARDS ---------- */
 
     .cards{
         grid-template-columns:1fr;
@@ -2818,7 +2993,6 @@ display:none;
     }
 
 
-    /* ---------- OBRA ESCRITA ---------- */
 
     .library-track{
         gap:15px;
@@ -2861,8 +3035,6 @@ display:none;
     }
 
 
-    /* ---------- HABILIDADES ---------- */
-
     .skills{
         gap:10px;
     }
@@ -2876,7 +3048,6 @@ display:none;
     }
 
 
-    /* ---------- FOOTER ---------- */
 
     footer{
         padding:55px 20px 35px;
@@ -2910,10 +3081,6 @@ display:none;
     }
 }
 
-
-/* =========================================================
-   CELULARES MUY PEQUEÑOS
-   ========================================================= */
 
 @media (max-width: 380px){
 
@@ -3037,7 +3204,7 @@ if(other!==card){
 other.classList.remove("open");
 const otherButton=other.querySelector(".expand-btn");
 if(otherButton){
-otherButton.textContent="Leer obra";
+otherButton.textContent="Leer más";
 }
 
 }
@@ -3050,7 +3217,7 @@ button.textContent=
 
 card.classList.contains("open")
 ? "Cerrar"
-: "Leer obra";
+: "Leer más";
 });
 });
 </script>
