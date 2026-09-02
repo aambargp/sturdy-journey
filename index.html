@@ -722,16 +722,14 @@ transform:none;
 }
 
 @media(max-width:900px){
-.hero h1{
-font-size:58px;
-}
 
-.about{
+    .hero h1{
+        font-size:clamp(3.2rem, 10vw, 58px);
+    }
 
-grid-template-columns:1fr;
-
-}
-
+    .about{
+        grid-template-columns:1fr;
+    }
 }
 
 </style>
@@ -2701,6 +2699,250 @@ display:none;
 
 }
 
+/* =========================================================
+   RESPONSIVE — CELULAR
+   ========================================================= */
+
+@media (max-width: 600px){
+
+    /* ---------- GENERAL ---------- */
+
+    body{
+        overflow-x:hidden;
+    }
+
+    section{
+        padding:70px 20px;
+    }
+
+
+    /* ---------- NAV ---------- */
+
+    nav{
+        padding:18px 20px;
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    nav .logo{
+        font-size:1.2rem;
+    }
+
+    nav ul{
+        width:100%;
+        justify-content:center;
+        gap:18px;
+        padding:0;
+        margin:0;
+        flex-wrap:wrap;
+    }
+
+    nav ul li a{
+        font-size:.78rem;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero{
+        min-height:90vh;
+        padding:30px 20px;
+    }
+
+    .hero-content{
+        width:100%;
+    }
+
+    .hero-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+    .hero h1{
+        font-size:clamp(3.2rem, 16vw, 5rem);
+        line-height:.9;
+    }
+
+    .hero-location{
+        font-size:.7rem;
+    }
+
+
+    /* ---------- TÍTULOS ---------- */
+
+    .section-title{
+        font-size:2.6rem;
+        line-height:1;
+        margin-bottom:35px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .about p{
+        font-size:1rem;
+        line-height:1.75;
+    }
+
+
+    /* ---------- GUIONES / CARDS ---------- */
+
+    .cards{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .card{
+        width:100%;
+        padding:28px 22px;
+    }
+
+    .card h3{
+        font-size:2.2rem;
+        line-height:1;
+    }
+
+    .project-tags{
+        gap:7px;
+    }
+
+    .project-tags span{
+        font-size:.72rem;
+    }
+
+
+    /* ---------- OBRA ESCRITA ---------- */
+
+    .library-track{
+        gap:15px;
+        padding:10px 0 25px;
+    }
+
+    .library-card{
+        flex:0 0 88vw;
+        padding:28px 22px;
+        box-sizing:border-box;
+    }
+
+    .library-card h3{
+        font-size:2rem;
+        line-height:1.05;
+    }
+
+    .card-subtitle{
+        font-size:.9rem;
+        line-height:1.5;
+    }
+
+    .card-preview{
+        font-size:.92rem;
+        line-height:1.65;
+    }
+
+    .card-content{
+        font-size:.9rem;
+    }
+
+    .card-content p{
+        line-height:1.75;
+    }
+
+    .quote-card{
+        padding:16px 18px;
+        font-size:.88rem;
+        line-height:1.7;
+    }
+
+
+    /* ---------- HABILIDADES ---------- */
+
+    .skills{
+        gap:10px;
+    }
+
+    .skill{
+        width:100%;
+        box-sizing:border-box;
+        padding:13px 18px;
+        font-size:.85rem;
+        line-height:1.4;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer{
+        padding:55px 20px 35px;
+    }
+
+    .footer-signature h2{
+        font-size:3.5rem;
+        line-height:1;
+    }
+
+    .footer-middle{
+        flex-direction:column;
+        align-items:center;
+        gap:30px;
+    }
+
+    .footer-contact{
+        text-align:center;
+        width:100%;
+    }
+
+    .footer-email{
+        font-size:.85rem;
+        word-break:break-word;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 380px){
+
+    nav ul{
+        gap:12px;
+    }
+
+    nav ul li a{
+        font-size:.7rem;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .section-title{
+        font-size:2.2rem;
+    }
+
+    .library-card{
+        flex-basis:90vw;
+    }
+
+    .card h3,
+    .library-card h3{
+        font-size:1.8rem;
+    }
+}
+
 </style>
 <script>
 
@@ -2762,9 +3004,18 @@ if(next && prev && track){
 
 next.addEventListener("click",()=>{
 
-track.scrollBy({
-left:595,
-behavior:"smooth"
+next.addEventListener("click",()=>{
+    track.scrollBy({
+        left: track.clientWidth * 0.88,
+        behavior:"smooth"
+    });
+});
+
+prev.addEventListener("click",()=>{
+    track.scrollBy({
+        left: -track.clientWidth * 0.88,
+        behavior:"smooth"
+    });
 });
 
 });
