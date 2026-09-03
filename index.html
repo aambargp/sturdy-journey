@@ -2136,18 +2136,12 @@ display:none;
 flex:0 0 560px;
 
 background:#faf7f2;
-
 border-radius:22px;
-
 padding:45px;
-
 box-shadow:
 0 15px 40px rgba(0,0,0,.08);
-
 transition:.45s;
-
 position:relative;
-
 overflow:hidden;
 
 }
@@ -2284,6 +2278,189 @@ opacity:.82;
     padding-bottom:8px;
     border-bottom:1px solid rgba(80,60,45,.18);
     color:#8b654c;
+}
+
+/* ==========================================
+   FIX BOTONES Y FLECHAS
+========================================== */
+
+/* --- BOTÓN VER VIDEO --- */
+
+.watch-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    margin-top:18px;
+    padding:11px 20px;
+
+    font-size:.9rem;
+    line-height:1.2;
+
+    border-radius:999px;
+    text-decoration:none;
+
+    white-space:nowrap;
+
+    position:relative;
+    z-index:5;
+}
+
+
+/* --- TARJETAS DE GUIONES --- */
+
+/* Evita que el botón quede recortado al abrir la tarjeta */
+.card.active .hidden{
+    overflow:visible;
+}
+
+#scripts .card{
+    overflow:visible;
+}
+
+
+/* ==========================================
+   FLECHAS — OBRA ESCRITA
+========================================== */
+
+.library-carousel{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    gap:20px;
+
+    width:100%;
+    max-width:1200px;
+
+    margin:0 auto;
+
+    padding:0 10px;
+    box-sizing:border-box;
+}
+
+
+/* La zona que contiene las tarjetas */
+
+.library-track{
+    flex:1;
+    min-width:0;
+
+    display:flex;
+    gap:35px;
+
+    overflow-x:auto;
+    overflow-y:visible;
+
+    scroll-behavior:smooth;
+
+    padding:20px 10px;
+
+    scrollbar-width:none;
+}
+
+.library-track::-webkit-scrollbar{
+    display:none;
+}
+
+
+/* Flechas */
+
+.library-arrow{
+    width:52px;
+    height:52px;
+
+    min-width:52px;
+    min-height:52px;
+
+    flex:0 0 52px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+    margin:0;
+
+    border:none;
+    border-radius:50%;
+
+    background:#2f241d;
+    color:white;
+
+    font-size:22px;
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    position:relative;
+    z-index:10;
+
+    box-sizing:border-box;
+}
+
+.library-arrow:hover{
+    background:#000;
+    transform:scale(1.08);
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .library-carousel{
+        gap:12px;
+        padding:0 5px;
+    }
+
+    .library-arrow{
+        width:46px;
+        height:46px;
+
+        min-width:46px;
+        min-height:46px;
+
+        flex-basis:46px;
+
+        font-size:20px;
+    }
+
+    .library-track{
+        gap:20px;
+        padding:15px 5px;
+    }
+
+    .library-card{
+        flex:0 0 88vw;
+        padding:35px;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .library-arrow{
+        width:42px;
+        height:42px;
+
+        min-width:42px;
+        min-height:42px;
+
+        flex-basis:42px;
+
+        font-size:18px;
+    }
+
+    .library-carousel{
+        gap:8px;
+    }
 }
 
 /* =========================================
